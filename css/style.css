@@ -20,9 +20,48 @@ body {
     height: 80px;
     padding: 0 8%;
 }
+.background{
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+.circle{
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    animation: float 8s ease-in-out infinite;
+}
+.one {
+    width: 350px;
+    height: 350px;
+    background: #2563eb;
+    top: -100px;
+    left: -100px;
+}
+.two {
+    width: 300px;
+    height: 300px;
+    background: #7c3aed;
+    right: -80px;
+    bottom: -80px;
+    animation-delay: 3s;
+}
+
+@keyframes float {
+    0%,100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(40px);
+    }
+}
 .logo{
     font-size: 2rem;
     font-weight: 600;
+    background:linear-gradient(90deg,#60a5fa,#c084fc);
+    -webkit-background-clip:text;
+    color:transparent;
 }
 .nav-buttons{
     align-items: center;
@@ -101,7 +140,8 @@ body {
 }
 .feature-card:hover{
     transform: translateY(-8px);
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 0 25px rgba(255,255,255,0.15);
 }
 
 @media(max-width: 768px) {

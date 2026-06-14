@@ -1,0 +1,130 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body {
+    min-height:100vh;
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    color:white;
+}
+
+.background {
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    z-index:-1;
+}
+.circle {
+    position:absolute;
+    border-radius:50%;
+    filter:blur(120px);
+    animation:float 8s ease infinite;
+}
+.one {
+    width:350px;
+    height:350px;
+    background:#2563eb;
+    top:-100px;
+    left:-100px;
+}
+.two {
+    width:300px;
+    height:300px;
+    background:#7c3aed;
+    bottom:-80px;
+    right:-80px;
+    animation-delay:3s;
+}
+
+.container {
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.card {
+    width:400px;
+    background:rgba(255,255,255,0.1);
+    border:1px solid rgba(255,255,255,0.2);
+    border-radius:25px;
+    padding:40px;
+}
+.card h1 {
+    text-align:center;
+    font-size:2rem;
+    background:linear-gradient(90deg,#60a5fa,#c084fc);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+.card h2 {
+    text-align:center;
+    margin:15px 0 30px;
+}
+
+.input-box {
+    margin-bottom:20px;
+}
+.input-box label {
+    display:block;
+    margin-bottom:8px;
+}
+.input-box input {
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    outline:none;
+}
+button {
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    background:#2563eb;
+    color:white;
+    font-size:1rem;
+    cursor:pointer;
+    transition:0.3s;
+}
+button:hover {
+    background:#1d4ed8;
+    transform:translateY(-3px);
+}
+.link,.back {
+    text-align:center;
+    display:block;
+    margin-top:20px;
+}
+.link a,.back {
+    color:#60a5fa;
+    text-decoration:none;
+}
+@keyframes float {
+
+    0%,100% {
+        transform:translateY(0);
+    }
+
+    50% {
+        transform:translateY(40px);
+    }
+
+}
+@media(max-width:480px) {
+
+    .card {
+        width:100%;
+        padding:30px;
+    }
+
+}
+
+small {
+    display: block;
+    margin-top: 8px;
+    color: #cbd5e1;
+    font-size: 0.85rem;
+}

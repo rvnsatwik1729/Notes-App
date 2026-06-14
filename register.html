@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | NoteSphere</title>
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+
+<body>
+
+<div class="background">
+    <div class="circle one"></div>
+    <div class="circle two"></div>
+</div>
+
+
+<div class="container">
+
+<div class="card">
+
+    <h1>NoteSphere</h1>
+
+    <h2>Create Account ✨</h2>
+
+    <form id="registerForm">
+
+        <div class="input-box">
+            <label>Full Name</label>
+            <input 
+            type="text" 
+            id="name"
+            placeholder="Enter your name"
+            required>
+        </div>
+
+
+        <div class="input-box">
+            <label>Username</label>
+            <input 
+            type="text"
+            id="username"
+            placeholder="Choose a username"
+            required>
+        </div>
+
+
+        <div class="input-box">
+            <label>Email</label>
+            <input 
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            required>
+        </div>
+
+
+        <div class="input-box">
+            <label>Password</label>
+            <input 
+            type="password"
+            id="password"
+            placeholder="Create a password"
+            required>
+
+            <small id="strength">
+                Password strength
+            </small>
+        </div>
+
+
+        <div class="input-box">
+            <label>Confirm Password</label>
+            <input 
+            type="password"
+            id="confirmPassword"
+            placeholder="Confirm password"
+            required>
+        </div>
+
+
+        <button type="submit">
+            Create Account
+        </button>
+
+
+    </form>
+
+
+    <p class="link">
+        Already have an account?
+        <a href="login.html">
+            Login
+        </a>
+    </p>
+
+
+    <a href="index.html" class="back">
+        ← Back to Dashboard
+    </a>
+
+
+</div>
+
+</div>
+
+
+<script src="js/auth.js"></script>
+
+</body>
+</html>
