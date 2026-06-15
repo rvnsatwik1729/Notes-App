@@ -14,7 +14,7 @@
         </div>
         <nav class="navbar">
             <h1 class="logo">NoteSphere</h1>
-                <div class="nav-buttons">
+                <div class="nav-buttons" id="nav-buttons">
                     <a href="login.html" class="login-button">Login</a>
                     <a href="register.html" class="register-button">Register</a>
                 </div>
@@ -29,23 +29,27 @@
 
             <p>A simple and secure place for all your notes.</p>
 
-            <button disabled>+ New Note</button>
+            <button id="new-note-btn" disabled>+ New Note</button>
 
         </section>
 
-        <section class="empty-state">
+        <section class="empty-state" id="empty-state">
             <div class="message">
                 <h3>Login to create your notes</h3>
                 <p>Your Personal work space is waiting</p>
             </div>
         </section>
 
-        <section class="features">
+        <section class="notes-container" id="notes-container">
+            
+        </section>
+
+        <section class="features" id="features">
             <div class="feature-card">Fast Search</div>
             <div class="feature-card">Secure Storage</div>
             <div class="feature-card">Beautiful Interface</div>
         </section>
-
     </main>
+    <script src="js/dashboard.js"></script>
 </body>
 </html>

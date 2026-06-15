@@ -141,11 +141,7 @@ if (loginForm) {
             alert("Enter password");
             return;
         }
-
-
         let foundUser = null;
-
-
         for (let user of users) {
 
             if (
