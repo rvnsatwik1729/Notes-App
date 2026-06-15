@@ -40,8 +40,31 @@
             </div>
         </section>
 
+        <div class="search-box">
+            <input 
+                type="text"
+                id="search-input"
+                placeholder="🔍 Search your notes..."
+            >
+        </div>
+
         <section class="notes-container" id="notes-container">
-            
+
+        </section>
+
+        <section class="note-modal" id="note-modal">
+            <div class="modal-content">
+                <h2>Create New Note</h2>
+
+                <form id="note-form">
+                    <input type="text" id="note-title" placeholder="Enter Title" required>
+                    <textarea  id="note-content" placeholder="Write your note" required></textarea>
+                    <div class="modal-buttons">
+                        <button type="submit" id="save-button">Save</button>
+                        <button id="close-modal" type="button">Cancel</button>
+                    </div>
+                </form>
+            </div>
         </section>
 
         <section class="features" id="features">

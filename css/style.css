@@ -111,6 +111,9 @@ body {
     font-size: 1rem;
     cursor: not-allowed;
 }
+.hero button:hover{
+    background: rgba(255, 255, 255, 0.2);
+}
 .empty-state {
     width: 80%;
     max-width: 700px;
@@ -158,4 +161,227 @@ body {
         flex-wrap:wrap;
         align-items: center;
     }
+}
+
+/* ================= NOTES SECTION ================= */
+
+.notes-container {
+    width: 85%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.note-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 20px;
+    padding: 22px;
+    transition: 0.3s;
+    word-wrap: break-word;
+}
+
+.note-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 30px rgba(96,165,250,0.35);
+}
+
+.note-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+
+.note-card p {
+    color: #cbd5e1;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.note-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.note-actions button {
+    border: none;
+    padding: 8px 16px;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.note-actions button:first-child {
+    background: #2563eb;
+}
+
+.note-actions button:last-child {
+    background: #dc2626;
+}
+
+.note-actions button:hover {
+    transform: scale(1.08);
+    opacity: 0.9;
+}
+
+
+/* ================= EMPTY NOTES MESSAGE ================= */
+
+.no-notes {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #cbd5e1;
+    grid-column: 1 / -1;
+    margin-top: 40px;
+}
+
+
+/* ================= CREATE NOTE MODAL ================= */
+
+.note-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(8px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    width: 90%;
+    max-width: 500px;
+    background: rgba(15, 23, 42, 0.9);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 25px;
+    padding: 30px;
+    animation: popup 0.3s ease;
+}
+
+.modal-content h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.modal-content input,
+.modal-content textarea {
+    width: 100%;
+    background: rgba(255,255,255,0.08);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 15px;
+    outline: none;
+    font-size: 1rem;
+}
+
+.modal-content textarea {
+    height: 150px;
+    resize: none;
+}
+
+.modal-content input::placeholder,
+.modal-content textarea::placeholder {
+    color: #94a3b8;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.modal-buttons button {
+    flex: 1;
+    padding: 13px;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.modal-buttons button:first-child {
+    background: #2563eb;
+}
+
+.modal-buttons button:last-child {
+    background: #475569;
+}
+
+.modal-buttons button:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+
+/* ================= POPUP ANIMATION ================= */
+
+@keyframes popup {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .notes-container {
+        width: 92%;
+    }
+
+    .note-card {
+        padding: 18px;
+    }
+
+    .modal-content {
+        padding: 22px;
+    }
+}
+
+
+.search-box {
+    width: 85%;
+    margin: 30px auto;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 15px 20px;
+    border-radius: 30px;
+    border: 1px solid rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.08);
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    backdrop-filter: blur(10px);
+}
+
+.search-box input::placeholder {
+    color: #cbd5e1;
+}
+
+.search-box input:focus {
+    border-color: #60a5fa;
+    box-shadow: 0 0 20px rgba(96,165,250,0.4);
+}
+
+.note-card small {
+    color: #94a3b8;
+    display: block;
+    margin-top: 8px;
+    font-size: 0.8rem;
 }
